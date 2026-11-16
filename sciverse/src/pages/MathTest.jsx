@@ -22,7 +22,7 @@ function MathTest() {
       <MathEquation
         latex={String.raw`E = mc^2`}
       />
-    </div> //ashik j
+    </div>
   );
 }
 
