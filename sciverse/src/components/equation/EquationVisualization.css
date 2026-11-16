@@ -1,0 +1,49 @@
+.eqviz-section { scroll-margin-top: 100px; }
+.eqviz-title-row { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom:22px; }
+.eqviz-title-row .section-description { margin-bottom:0; }
+.eqviz-live-label { display:inline-flex; align-items:center; gap:8px; white-space:nowrap; padding:7px 11px; border:1px solid var(--border, #dbe3ef); border-radius:999px; color:var(--text-secondary, #64748b); font-size:12px; font-weight:600; }
+.eqviz-live-label span { width:7px; height:7px; border-radius:50%; background:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.12); }
+.eqviz-panel { overflow:hidden; border:1px solid var(--border, #e2e8f0); border-radius:18px; background:var(--surface, #fff); box-shadow:0 8px 28px rgba(15,23,42,.045); }
+.eqviz-panel-top { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 24px; border-bottom:1px solid var(--border, #e2e8f0); }
+.eqviz-overline { color:var(--text-secondary, #64748b); font-size:10px; letter-spacing:.12em; font-weight:700; }
+.eqviz-panel-top h3 { margin:6px 0 0; color:var(--text-primary, #172033); font-size:19px; }
+.eqviz-formula { min-width:130px; color:var(--text-primary, #172033); }
+.eqviz-formula .katex-display { margin:0; }
+.eqviz-workspace { display:grid; grid-template-columns:minmax(220px, .78fr) minmax(0, 1.55fr); }
+.eqviz-controls { padding:22px; border-right:1px solid var(--border, #e2e8f0); }
+.eqviz-controls-heading { display:flex; align-items:center; justify-content:space-between; margin-bottom:22px; }
+.eqviz-controls-heading h4,.eqviz-chart-heading h4 { margin:0; color:var(--text-primary, #172033); font-size:14px; }
+.eqviz-controls-heading button { border:0; background:transparent; color:var(--primary, #2563eb); font-size:12px; font-weight:650; cursor:pointer; }
+.eqviz-control { margin-bottom:22px; }
+.eqviz-control-label { display:flex; justify-content:space-between; gap:10px; margin-bottom:12px; color:var(--text-primary, #172033); font-size:13px; }
+.eqviz-control-label label { font-weight:600; }
+.eqviz-control-label output { color:var(--primary, #2563eb); font-weight:700; font-variant-numeric:tabular-nums; }
+.eqviz-control input[type="range"] { width:100%; accent-color:var(--primary, #2563eb); cursor:pointer; }
+.eqviz-range-labels { display:flex; justify-content:space-between; margin-top:5px; color:var(--text-secondary, #64748b); font-size:10px; }
+.eqviz-result { display:flex; flex-direction:column; gap:6px; margin-top:25px; padding:16px; border:1px solid rgba(37,99,235,.18); border-radius:12px; background:rgba(37,99,235,.055); }
+.eqviz-result span { color:var(--text-secondary, #64748b); font-size:11px; font-weight:650; }
+.eqviz-result strong { color:var(--primary, #2563eb); font-size:25px; line-height:1.2; font-variant-numeric:tabular-nums; }
+.eqviz-result small { color:var(--text-secondary, #64748b); font-size:10px; line-height:1.5; }
+.eqviz-graph-column { min-width:0; padding:22px 20px 18px; }
+.eqviz-chart-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+.eqviz-chart-heading span { color:var(--text-secondary, #64748b); font-size:10px; }
+.eqviz-chart { display:block; width:100%; overflow:visible; }
+.eqviz-grid-line { stroke:var(--border, #e2e8f0); stroke-width:1; stroke-dasharray:3 5; }
+.eqviz-axis { stroke:var(--text-secondary, #94a3b8); stroke-width:1.2; }
+.eqviz-curve { fill:none; stroke:var(--primary, #2563eb); stroke-width:3.2; stroke-linecap:round; stroke-linejoin:round; }
+.eqviz-active-point { fill:#06b6d4; stroke:var(--surface, #fff); stroke-width:3; }
+.eqviz-axis-label { fill:var(--text-secondary, #64748b); font-size:10px; }
+.eqviz-chart-footnote { display:flex; justify-content:space-between; gap:12px; color:var(--text-secondary, #64748b); font-size:10px; }
+.eqviz-explanation { margin:15px 0 0; padding:12px 14px; border-left:3px solid var(--accent, #06b6d4); border-radius:0 8px 8px 0; background:var(--bg, #f5f7fb); color:var(--text-secondary, #64748b); font-size:12px; line-height:1.65; }
+.eqviz-disclaimer { display:flex; gap:10px; padding:13px 20px; border-top:1px solid var(--border, #e2e8f0); color:var(--text-secondary, #64748b); background:var(--bg, #f5f7fb); }
+.eqviz-disclaimer span { color:var(--primary, #2563eb); font-weight:700; }
+.eqviz-disclaimer p { margin:0; font-size:11px; line-height:1.6; }
+@media (max-width: 760px) {
+  .eqviz-title-row { flex-direction:column; }
+  .eqviz-panel-top { align-items:flex-start; flex-direction:column; }
+  .eqviz-workspace { grid-template-columns:1fr; }
+  .eqviz-controls { border-right:0; border-bottom:1px solid var(--border, #e2e8f0); }
+  .eqviz-graph-column { padding:18px 12px; }
+  .eqviz-chart-heading { align-items:flex-start; flex-direction:column; }
+  .eqviz-chart-footnote { font-size:9px; }
+}

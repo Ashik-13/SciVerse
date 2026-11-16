@@ -1,4 +1,4 @@
-import MathEquation from '../components/common/MathEquation';
+import MathEquation from "../components/common/MathEquation";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight, BookOpen, CheckCircle2, Lightbulb } from "lucide-react";
 import { BlockMath } from "react-katex";
@@ -10,6 +10,7 @@ import EquationHeader from "../components/equation/EquationHeader";
 import VariableTable from "../components/equation/VariableTable";
 import Derivation from "../components/equation/Derivation";
 import ReferenceList from "../components/equation/ReferenceList";
+import EquationVisualization from "../components/equation/EquationVisualization";
 
 function EquationDetails() {
   const { slug } = useParams();
@@ -106,6 +107,10 @@ function EquationDetails() {
 
             <VariableTable variables={details.variables} />
           </section>
+
+          {/* INTERACTIVE VISUALIZATION */}
+
+          <EquationVisualization equationId={equation.id} />
 
           {/* DIMENSIONAL ANALYSIS */}
 
@@ -259,6 +264,7 @@ function EquationDetails() {
             <span>ON THIS PAGE</span>
 
             <a href="#introduction">Introduction</a>
+            <a href="#visualization">Interactive visualization</a>
             <a href="#interpretation">Interpretation</a>
             <a href="#variables">Variables and symbols</a>
             <a href="#dimensions">Dimensional analysis</a>

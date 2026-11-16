@@ -75,6 +75,172 @@ export const equations = [
     type: "Constitutive Law",
     applications: ["Thermal insulation", "Heat exchangers", "Thermal design"],
   },
+
+  // NEW PHYSICS EQUATIONS
+
+  {
+    id: "first-equation-of-motion",
+    name: "First Equation of Motion",
+    formula: String.raw`v = u + at`,
+    subject: "Physics",
+    category: "Kinematics",
+    description:
+      "Relates final velocity to initial velocity, constant acceleration, and elapsed time.",
+    level: "Beginner",
+    type: "Kinematic Equation",
+    applications: [
+      "Uniformly accelerated motion",
+      "Vehicle motion analysis",
+      "Motion experiments",
+    ],
+  },
+  {
+    id: "second-equation-of-motion",
+    name: "Second Equation of Motion",
+    formula: String.raw`s = ut + \frac{1}{2}at^2`,
+    subject: "Physics",
+    category: "Kinematics",
+    description:
+      "Determines displacement from initial velocity, constant acceleration, and elapsed time.",
+    level: "Beginner",
+    type: "Kinematic Equation",
+    applications: [
+      "Free-fall calculations",
+      "Vehicle displacement",
+      "Motion analysis",
+    ],
+  },
+  {
+    id: "third-equation-of-motion",
+    name: "Third Equation of Motion",
+    formula: String.raw`v^2 = u^2 + 2as`,
+    subject: "Physics",
+    category: "Kinematics",
+    description:
+      "Relates initial velocity, final velocity, constant acceleration, and displacement without requiring time.",
+    level: "Beginner",
+    type: "Kinematic Equation",
+    applications: [
+      "Braking distance calculations",
+      "Free-fall motion",
+      "Accelerated motion",
+    ],
+  },
+  {
+    id: "linear-momentum",
+    name: "Linear Momentum",
+    formula: String.raw`p = mv`,
+    subject: "Physics",
+    category: "Classical Mechanics",
+    description:
+      "Defines the linear momentum of an object as the product of its mass and velocity.",
+    level: "Beginner",
+    type: "Fundamental Relation",
+    applications: [
+      "Collision analysis",
+      "Momentum conservation",
+      "Rocket motion",
+    ],
+  },
+  {
+    id: "kinetic-energy",
+    name: "Kinetic Energy",
+    formula: String.raw`K = \frac{1}{2}mv^2`,
+    subject: "Physics",
+    category: "Work and Energy",
+    description:
+      "Expresses the kinetic energy of an object in terms of its mass and speed.",
+    level: "Beginner",
+    type: "Energy Equation",
+    applications: [
+      "Vehicle energy analysis",
+      "Mechanical systems",
+      "Collision calculations",
+    ],
+  },
+  {
+    id: "gravitational-potential-energy",
+    name: "Gravitational Potential Energy",
+    formula: String.raw`U = mgh`,
+    subject: "Physics",
+    category: "Work and Energy",
+    description:
+      "Gives the change in gravitational potential energy near Earth's surface for a change in height.",
+    level: "Beginner",
+    type: "Energy Equation",
+    applications: [
+      "Lifting objects",
+      "Hydropower systems",
+      "Mechanical energy conservation",
+    ],
+  },
+  {
+    id: "work-done-by-force",
+    name: "Work Done by a Constant Force",
+    formula: String.raw`W = Fd\cos\theta`,
+    subject: "Physics",
+    category: "Work and Energy",
+    description:
+      "Calculates the work done by a constant force through a displacement, where theta is the angle between force and displacement.",
+    level: "Beginner",
+    type: "Work Relation",
+    applications: [
+      "Mechanical work calculations",
+      "Lifting and pushing objects",
+      "Energy transfer analysis",
+    ],
+  },
+  {
+    id: "mechanical-power",
+    name: "Mechanical Power",
+    formula: String.raw`P = \frac{W}{t}`,
+    subject: "Physics",
+    category: "Work and Energy",
+    description:
+      "Defines average mechanical power as the work transferred per unit time.",
+    level: "Beginner",
+    type: "Rate Equation",
+    applications: [
+      "Motor performance",
+      "Engine power estimation",
+      "Mechanical system design",
+    ],
+  },
+  {
+    id: "hookes-law",
+    name: "Hooke's Law",
+    formula: String.raw`F = -kx`,
+    subject: "Physics",
+    category: "Oscillations",
+    description:
+      "Describes the restoring force of an ideal linear spring within its elastic limit.",
+    level: "Intermediate",
+    type: "Constitutive Law",
+    applications: [
+      "Spring-mass systems",
+      "Mechanical vibration",
+      "Elastic material behaviour",
+    ],
+  },
+  {
+    id: "universal-gravitation",
+    name: "Newton's Law of Universal Gravitation",
+    formula: String.raw`F = G\frac{m_1m_2}{r^2}`,
+    subject: "Physics",
+    category: "Gravitation",
+    description:
+      "Describes the magnitude of the gravitational attraction between two point masses separated by a distance r.",
+    level: "Intermediate",
+    type: "Fundamental Law",
+    applications: [
+      "Planetary motion",
+      "Satellite orbits",
+      "Gravitational force calculations",
+    ],
+  },
+
+  // CHEMISTRY EQUATIONS
+
   {
     id: "ideal-gas-law",
     name: "Ideal Gas Law",
@@ -139,6 +305,9 @@ export const equations = [
       "Corrosion studies",
     ],
   },
+
+  // MATHEMATICS EQUATIONS
+
   {
     id: "quadratic-formula",
     name: "Quadratic Formula",
@@ -210,4 +379,8 @@ export const equationTypes = [
   "Geometric Theorem",
   "Calculus Rule",
   "Statistical Formula",
+  "Kinematic Equation",
+  "Energy Equation",
+  "Work Relation",
+  "Rate Equation",
 ];

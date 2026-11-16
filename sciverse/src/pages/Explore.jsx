@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Search } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
 
 import ExploreFilters from "../components/explore/ExploreFilters";
@@ -6,29 +7,27 @@ import EquationResultCard from "../components/explore/EquationResultCard";
 
 import { equations, equationTypes } from "../data/equations";
 
-
-function normalizeSearchText(value = '') {
+function normalizeSearchText(value = "") {
   const superscripts = {
-    '⁰': '^0',
-    '¹': '^1',
-    '²': '^2',
-    '³': '^3',
-    '⁴': '^4',
-    '⁵': '^5',
-    '⁶': '^6',
-    '⁷': '^7',
-    '⁸': '^8',
-    '⁹': '^9',
+    "⁰": "^0",
+    "¹": "^1",
+    "²": "^2",
+    "³": "^3",
+    "⁴": "^4",
+    "⁵": "^5",
+    "⁶": "^6",
+    "⁷": "^7",
+    "⁸": "^8",
+    "⁹": "^9",
   };
 
   return String(value)
     .replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g, (char) => superscripts[char])
-    .replace(/[−–—]/g, '-')
-    .normalize('NFKC')
+    .replace(/[−–—]/g, "-")
+    .normalize("NFKC")
     .toLowerCase()
-    .replace(/[{}\s\\]/g, '');
+    .replace(/[{}\s\\]/g, "");
 }
-
 
 const ITEMS_PER_PAGE = 6;
 
@@ -36,8 +35,10 @@ function Explore() {
   const [searchParams] = useSearchParams();
 
   const [search, setSearch] = useState(() => searchParams.get("search") || "");
-  const [subject, setSubject] = useState(searchParams.get('subject') || 'All');
-  const [category, setCategory] = useState(searchParams.get('category') || 'All');
+  const [subject, setSubject] = useState(searchParams.get("subject") || "All");
+  const [category, setCategory] = useState(
+    searchParams.get("category") || "All",
+  );
   const [difficulty, setDifficulty] = useState("All");
   const [type, setType] = useState("All");
   const [sort, setSort] = useState("name-asc");
@@ -57,16 +58,17 @@ function Explore() {
     const query = normalizeSearchText(search);
 
     const result = equations.filter((equation) => {
-
-        const searchableContent = normalizeSearchText([
-            equation.name,
-            equation.formula,
-            equation.subject,
-            equation.category,
-            equation.description,
-            equation.type,
-            ...equation.applications,
-            ].join(' '));
+      const searchableContent = normalizeSearchText(
+        [
+          equation.name,
+          equation.formula,
+          equation.subject,
+          equation.category,
+          equation.description,
+          equation.type,
+          ...equation.applications,
+        ].join(" "),
+      );
 
       const matchesSearch = !query || searchableContent.includes(query);
 
